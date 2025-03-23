@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-dark,
+.header-light {
+  background-size: cover;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.header-dark {
+  background-image: url(../bg-desktop-dark.jpg);
+}
+.header-light {
+  background-image: url(../bg-desktop-light.jpg);
+}
+
+.header__section {
+  width: 30%;
+}
+
+.todo-title-image-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.image-box {
+  cursor: pointer;
+}
+
+.image-box > img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+.todo-title-image-box > h1 {
+  color: #f5f5f5;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  font-size: 35px;
+}
+
+/* .todo-form {
+  display: flex;
+  gap: 2px;
+} */
+.todo-form-input-dark,
+.todo-form-input-light {
+  width: 100%;
+  height: 60px;
+  border: none;
+  outline: none;
+  text-indent: 15px;
+  border-radius: 5px;
+}
+.todo-form-input-dark {
+  background-color: hsl(235, 24%, 19%);
+  color: hsl(233, 11%, 84%);
+}
+.todo-form-input-light {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(235, 24%, 19%);
+}
+
+/* .todo-form > button {
+  background-color: hsl(235, 24%, 19%);
+  color: #f5f5f5;
+  padding: 10px;
+  border-radius: 5px;
+  width: 60px;
+  border: 1px solid gray;
+  cursor: pointer;
+} */
+
+.todo-item-box-dark,
+.todo-item-box-light {
+  margin-top: 20px;
+  padding-block: 10px;
+  border-radius: 5px;
+  transition: background 0.3s ease-in;
+}
+.todo-item-box-dark {
+  background-color: hsl(235, 24%, 19%);
+}
+.todo-item-box-light {
+  background-color: hsl(0, 0%, 98%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.todo-item-li-dark,
+.todo-item-li-light {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s ease-in;
+}
+.todo-item-li-dark {
+  border-bottom: 1px solid hsl(235, 19%, 35%);
+  color: hsl(233, 11%, 84%);
+}
+.todo-item-li-light {
+  border-bottom: 1px solid hsl(233, 11%, 84%);
+  color: hsl(235, 19%, 35%);
+}
+
+.todo-empty-p-dark,
+.todo-empty-p-light {
+  color: hsl(233, 11%, 84%);
+  text-align: center;
+  padding: 10px 15px 15px 15px;
+}
+.todo-empty-p-dark {
+  color: hsl(233, 11%, 84%);
+  border-bottom: 1px solid hsl(235, 19%, 35%);
+}
+.todo-empty-p-light {
+  color: hsl(235, 19%, 35%);
+  border-bottom: 1px solid hsl(233, 11%, 84%);
+}
+
+.todo-input-label-box {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* custom checkbox */
+.todo-checkbox-dark,
+.todo-checkbox-light {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+.todo-checkbox-dark {
+  border: 2px solid hsl(235, 19%, 35%);
+}
+.todo-checkbox-light {
+  border: 2px solid hsl(233, 11%, 84%);
+}
+
+input[type='checkbox']:checked {
+  background: url(../public/icon-check.svg),
+    linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+}
+/* custom checkbox end*/
+
+.todo-title {
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.todo-delete {
+  font-size: 30px;
+  color: hsl(235, 19%, 35%);
+}
+
+.todo-item-bottom-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+.todo-item-bottom-box p {
+  color: hsl(234, 11%, 52%);
+  font-size: 15px;
+}
+
+.all-active-box-dark span,
+.all-active-box-light span {
+  font-size: 15px;
+  cursor: pointer;
+}
+.all-active-box-dark span:hover {
+  color: #f5f5f5;
+}
+.all-active-box-light span:hover {
+  color: #121212;
+}
+
+.all-btn {
+  color: hsl(234, 11%, 52%);
+}
+.active-btn {
+  margin-inline: 10px;
+  color: hsl(234, 11%, 52%);
+}
+.completed-btn {
+  color: hsl(234, 11%, 52%);
+}
+
+.clear-btn-dark,
+.clear-btn-light {
+  color: hsl(234, 11%, 52%);
+  font-size: 15px;
+  cursor: pointer;
+}
+.clear-btn-dark:hover {
+  color: #f5f5f5;
+}
+.clear-btn-light:hover {
+  color: #121212;
+}
+
+.drag-p-dark,
+.drag-p-light {
+  color: hsl(234, 11%, 52%);
+  text-align: center;
+  margin-top: 30px;
+  padding-bottom: 50px;
+  font-size: 14px;
+}
+
+.todo-footer-dark {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* background-color: #121212; */
+  background-color: hsl(235, 21%, 11%);
+  height: 40px;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+.todo-footer-light {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.5);
+}
+
+.todo-footer-dark > p,
+.todo-footer-light > p {
+  font-size: 14px;
+}
+.todo-footer-dark > p > a,
+.todo-footer-light > p > a {
+  color: hsl(220, 98%, 61%);
+}
+
+/* media query for smaller screen */
+@media only screen and (min-device-width: 540px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+  .header__section {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 540px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .header-dark,
+  .header-light {
+    padding-inline: 30px;
+    background-size: cover;
+  }
+  .header-dark {
+    background-image: url(../bg-mobile-dark.jpg);
+  }
+  .header-light {
+    background-image: url(../bg-mobile-light.jpg);
+  }
+
+  .header__section {
+    width: 100%;
+  }
+
+  .todo-title-image-box > h1 {
+    font-size: 30px;
+  }
+
+  .image-box > img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .todo-title {
+    font-size: 15px;
+  }
+
+  .todo-delete {
+    font-size: 25px;
+  }
+
+  .todo-item-box-dark,
+  .todo-item-box-light {
+    position: relative;
+  }
+
+  .all-active-box-dark,
+  .all-active-box-light {
+    height: 50px;
+    position: absolute;
+    bottom: -65px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    padding: 17px;
+    border-radius: 5px;
+  }
+
+  .all-active-box-dark {
+    background-color: hsl(235, 24%, 19%);
+  }
+  .all-active-box-light {
+    background-color: hsl(0, 0%, 98%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .active-btn {
+    margin-inline: 20px;
+  }
+
+  .drag-p-dark,
+  .drag-p-light {
+    margin-top: 100px;
+  }
+
+  .todo-footer-dark > p,
+  .todo-footer-light > p {
+    font-size: 11px;
+  }
+}
